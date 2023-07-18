@@ -1,0 +1,24 @@
+<%- include('partials/header'); -%>
+
+<div>
+  <h1>Hello Mr.T</h1>
+
+  <p>Sample text: <%= homeStartingContent %></p>
+</div>
+
+<div class="container">
+  <div class="row">
+    <ul>
+      <% globalData.forEach(function(formData) {%>
+        <li>
+          <h3><%= formData.inputValue %></h3>
+          <p><%= formData.inputContent.substring(0,100) + "..." %></p> <span><a class="btn btn-secodary outline" href="/globalData/<%=formData.inputValue%>">Read more</a></span>
+        </li>
+      <% }); %>
+    </ul>
+  </div>
+</div>
+<img src="" alt="">
+
+
+<%- include('partials/footer'); -%>
